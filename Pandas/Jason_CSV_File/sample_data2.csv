@@ -1,0 +1,17 @@
+id,name,type,hp,attack,defense,speed
+1,Pikachu,NA,35,55,40,90
+2,Charizard,Fire,78,84,78,100
+2,Charizard,Fire,78,84,78,100
+2,Charizard,Fire,78,84,78,100
+2,Charizard,Fire,78,84,78,100
+3,Bulbasaur,Gost,45,49,49,45
+4,Squirtle,Water,44,48,65,43
+5,Gengar,Ghost,60,65,60,110
+5,Gengar,Ghost,60,65,60,110
+5,Gengar,Ghost,60,65,60,110
+5,Gengar,Ghost,60,65,60,110
+6,Mewtwo,Psychic,106,110,90,130
+7,Eevee,Normal,55,55,50,55
+8,Snorlax,Normal,160,110,65,30
+9,Dragonite,Fire,91,134,95,80
+10,Lucario,Fire,70,110,70,90
