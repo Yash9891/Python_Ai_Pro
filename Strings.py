@@ -339,7 +339,21 @@ print(sortChar(str1))
 
 
             
+# Count the number of words in a given string--------------
 
+def CountWords(s):
+# Split on any whitespace and filter out empty strings
+    words = s.split()
+    print(words)
+    return len(words)
+
+
+# Example usage
+str1 = "This is good superman"
+print(CountWords(str1))
+
+
+            
 
 
 
