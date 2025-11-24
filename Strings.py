@@ -353,7 +353,25 @@ str1 = "This is good superman"
 print(CountWords(str1))
 
 
-            
+
+# Change case of each character in a string--------------
+
+def change_case(s):
+    result = ""
+    for char in s:
+        if char.isalpha():
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char  # Keep non-alphabet characters unchanged
+    return result
+
+# Example usage
+str1 = "elPHa iS GooD"
+print(change_case(str1))  # Output: ELphA Is gOOd
+
 
 
 
