@@ -327,7 +327,20 @@ def largestWord(str):
 str="Google is the large company in this universe pokimonPro is good"
 print(largestWord(str))
 
+
+# Write a program to sort characters in a string--------------
+
+def sortChar(s):
+    return ''.join(sorted(s))
+
+# Example usage
+str1 = "badoeapd"
+print(sortChar(str1))
+
+
             
+
+
 
 
 
