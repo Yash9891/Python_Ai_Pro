@@ -372,6 +372,32 @@ def change_case(s):
 str1 = "elPHa iS GooD"
 print(change_case(str1))  # Output: ELphA Is gOOd
 
+# Find word with highest number of repeated letters in string------------
+
+def repeat(string):
+    words=string.split()
+    repeat_word=""
+    max_repeat=0
+    for word in words:
+        fre={}
+        for char in word:
+            if char not in fre:
+                fre[char]=1
+            else:
+                fre[char]+=1
+        highest_repeat=max(fre.values())
+        if highest_repeat>max_repeat:
+            max_repeat=highest_repeat
+            repeat_word=word
+    return repeat_word
+            
+
+
+# Example usage
+string = "abcdefghij google microsoft pooop yes"
+print(repeat(string))  # Output: google
+
+
 
 
 
