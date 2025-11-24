@@ -399,6 +399,24 @@ print(repeat(string))  # Output: google
 
 
 
+# Find the Position of a Substring within a String------------
+
+def position(str1, str2):
+    index=-1
+    
+    if str2 in str1:
+        index=str1.index(str2)
+    return index
+    
+            
+
+
+str1 = "takeuforward"
+str2 = "take”
+if position(str1, str2)!=-1:
+    print(f" Position at : {position(str1, str2)}")
+else:
+    print("Not found")
 
 
 
