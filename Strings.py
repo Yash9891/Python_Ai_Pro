@@ -273,3 +273,17 @@ def duplicates(str):
     
 str= "sinstriiintng"
 print(duplicates(str))
+
+# Remove Characters from first String present in the Second String--------------
+
+
+def removeChar(str1, str2):
+    result = ""
+    for char in str1:
+        if char not in str2:
+            result += char
+    return result
+
+str1 = "abcdef"
+str2 = "cefz"
+print(removeChar(str1, str2))  
