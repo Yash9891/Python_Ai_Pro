@@ -287,3 +287,50 @@ def removeChar(str1, str2):
 str1 = "abcdef"
 str2 = "cefz"
 print(removeChar(str1, str2))  
+
+# Change every letter with next lexicographic alphabet---------------------------
+#Input: str1 = “xyzpw”, str2 = "lmno" 
+# Output: xyzpw 
+
+def lexicographic(s):
+    result=""
+    for char in s:
+        if char.isalpha():
+             #Shift character by 1, wrap around after 'z'
+             if char =='z':
+                 result+='a'
+             elif char=="Z":
+                 result+="A"
+             else:
+                result+=chr(ord(char)+1)
+        else:
+            result+=char
+    return result 
+
+str1 = "xyzpw"
+print(lexicographic(str1))  # Output: yz
+
+
+# Find the largest word in a String--------------------------------
+
+def largestWord(str):
+    LargestWord=""
+    word_list=str.split(" ")
+    currLen=len(word_list[0])
+    for word in word_list:
+        if len(word)>currLen:
+            LargestWord=word
+            currLen=len(word)
+    return LargestWord
+    
+    
+str="Google is the large company in this universe pokimonPro is good"
+print(largestWord(str))
+
+            
+
+
+
+            
+
+
