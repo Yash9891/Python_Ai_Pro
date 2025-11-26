@@ -273,3 +273,153 @@ def duplicates(str):
     
 str= "sinstriiintng"
 print(duplicates(str))
+
+# Remove Characters from first String present in the Second String--------------
+
+
+def removeChar(str1, str2):
+    result = ""
+    for char in str1:
+        if char not in str2:
+            result += char
+    return result
+
+str1 = "abcdef"
+str2 = "cefz"
+print(removeChar(str1, str2))  
+
+# Change every letter with next lexicographic alphabet---------------------------
+#Input: str1 = “xyzpw”, str2 = "lmno" 
+# Output: xyzpw 
+
+def lexicographic(s):
+    result=""
+    for char in s:
+        if char.isalpha():
+             #Shift character by 1, wrap around after 'z'
+             if char =='z':
+                 result+='a'
+             elif char=="Z":
+                 result+="A"
+             else:
+                result+=chr(ord(char)+1)
+        else:
+            result+=char
+    return result 
+
+str1 = "xyzpw"
+print(lexicographic(str1))  # Output: yz
+
+
+# Find the largest word in a String--------------------------------
+
+def largestWord(str):
+    LargestWord=""
+    word_list=str.split(" ")
+    currLen=len(word_list[0])
+    for word in word_list:
+        if len(word)>currLen:
+            LargestWord=word
+            currLen=len(word)
+    return LargestWord
+    
+    
+str="Google is the large company in this universe pokimonPro is good"
+print(largestWord(str))
+
+
+# Write a program to sort characters in a string--------------
+
+def sortChar(s):
+    return ''.join(sorted(s))
+
+# Example usage
+str1 = "badoeapd"
+print(sortChar(str1))
+
+
+            
+# Count the number of words in a given string--------------
+
+def CountWords(s):
+# Split on any whitespace and filter out empty strings
+    words = s.split()
+    print(words)
+    return len(words)
+
+
+# Example usage
+str1 = "This is good superman"
+print(CountWords(str1))
+
+
+
+# Change case of each character in a string--------------
+
+def change_case(s):
+    result = ""
+    for char in s:
+        if char.isalpha():
+            if char.islower():
+                result += char.upper()
+            else:
+                result += char.lower()
+        else:
+            result += char  # Keep non-alphabet characters unchanged
+    return result
+
+# Example usage
+str1 = "elPHa iS GooD"
+print(change_case(str1))  # Output: ELphA Is gOOd
+
+# Find word with highest number of repeated letters in string------------
+
+def repeat(string):
+    words=string.split()
+    repeat_word=""
+    max_repeat=0
+    for word in words:
+        fre={}
+        for char in word:
+            if char not in fre:
+                fre[char]=1
+            else:
+                fre[char]+=1
+        highest_repeat=max(fre.values())
+        if highest_repeat>max_repeat:
+            max_repeat=highest_repeat
+            repeat_word=word
+    return repeat_word
+            
+
+
+# Example usage
+string = "abcdefghij google microsoft pooop yes"
+print(repeat(string))  # Output: google
+
+
+
+# Find the Position of a Substring within a String------------
+
+def position(str1, str2):
+    index=-1
+    
+    if str2 in str1:
+        index=str1.index(str2)
+    return index
+    
+            
+
+
+str1 = "takeuforward"
+str2 = "take”
+if position(str1, str2)!=-1:
+    print(f" Position at : {position(str1, str2)}")
+else:
+    print("Not found")
+
+
+
+            
+
+
